@@ -12,6 +12,9 @@ export function createElement(className, tagName, appendToEl) {
   if (className) {
     el.className = className;
   }
+  if(tagName == "img"){
+    el.setAttribute("crossorigin", "anonymous");
+  }
   if (appendToEl) {
     appendToEl.appendChild(el);
   }
